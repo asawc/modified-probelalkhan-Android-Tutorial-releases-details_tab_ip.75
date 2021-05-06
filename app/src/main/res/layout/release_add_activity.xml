@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="myapp.releaseActivity.AddReleaseActivityCustViewDial">
+
+    <Button
+        android:id="@+id/butonAddRelease"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="100dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimary"
+        android:text="Add release"
+        android:clickable="false" />
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/butonAddRelease"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/editTextReleaseName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:hint="Nazwa wydania"
+            android:inputType="text"
+            android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextReleaseName"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:padding="0dp">
+        <TextView
+            android:id="@+id/employeeChecked_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:textSize="26dp"
+            android:textAlignment="center"
+            android:textColor="#36936b"
+            android:text="Pracownik"
+            android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/employees_button"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/employeeChecked_textView"
+            android:layout_gravity="center"
+            android:text="Select Employee"
+            />
+
+        <Button
+            android:id="@+id/products_button"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/employees_button"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Select products from list" />
+
+        <Button
+            android:id="@+id/product_scan_button"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/employees_button"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Scan product' code" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/input_data_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/buttons_layout"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="#fd0303"
+        android:textStyle="bold"
+        android:background="#ffff"
+        android:text="Error"
+        android:visibility="gone"/>
+
+    <ListView
+
+        android:id="@+id/products_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_data_error"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="1dp" />
+<!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"/>
+        -->
+</RelativeLayout>

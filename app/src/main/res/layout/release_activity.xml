@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+tools:context="myapp.releaseActivity.ReleaseActivity"
+android:layout_height="match_parent"
+android:layout_width="match_parent"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBarLayout">
+    </com.google.android.material.appbar.AppBarLayout>
+<!--
+    <include layout="@layout/content_release"/>
+-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/fab"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"/>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/toolbarLayout"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:layout_anchorGravity="center"
+            app:layout_anchor="@+id/appBarLayout"
+            android:visibility="visible"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/textView"
+                android:textSize="22dp"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:text="Wydania"/>
+
+        </androidx.appcompat.widget.Toolbar>
+<!--
+    <ListView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@android:id/list"/>
+         app:layout_constraintBottom_toTopOf="@+id/releasesRecyclerView"
+-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp">
+
+        <include layout="@layout/release_activity_list_header"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/releasesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
