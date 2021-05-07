@@ -72,7 +72,6 @@ public class AutoCompleteAdapter extends ArrayAdapter<String>
                 ArrayList<String> newValues = (ArrayList<String>) results.values;
                 for (int i = 0; i < newValues.size(); i++) {
                     add(newValues.get(i));
-
                 }
 
                 if (results != null && results.count > 0) {
